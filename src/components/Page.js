@@ -1,6 +1,5 @@
 import React from 'react';
 import { LocalThemedBox } from './LocalThemedBox';
-import { ThemeContext } from './ThemeProvider';
 
 const Page = () => {
 
