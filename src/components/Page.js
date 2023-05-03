@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { LocalThemedBox } from './LocalThemedBox';
+import { ThemeContext, ThemeProvider } from './ThemeProvider';
 
 const Page = () => {
 
-    return(
-        <div className={"container bg-light"} id="themed-page">
+    const {theme,setTheme} = useContext(ThemeContext);
 
-            <p id="themed-text-container">
+    return(
+        <div className={'bg-'+theme} id="themed-page">
+            <p id="themed-text-container" className={'txt-'+theme}>
                 lorem ipsum dolor iterit n stuff
             </p>
-            <button className="btn" id="themed-button">Themed Button</button>
-            <LocalThemedBox />
+            {/* 'btn btn-'+theme 'txt-'+theme */}
+            <button className={`btn btn-${theme} txt-${theme}`} id="themed-button">Themed Button</button>
+           
+        <LocalThemedBox/>
+           
         </div>
     )
 }
