@@ -4,7 +4,8 @@ import { LocalThemedBox } from './LocalThemedBox';
 const Page = () => {
 
     return(
-        <div className={"container"} id="themed-page">
+        <div className={"container bg-light"} id="themed-page">
+
             <p id="themed-text-container">
                 lorem ipsum dolor iterit n stuff
             </p>
